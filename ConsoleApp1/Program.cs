@@ -55,7 +55,7 @@ namespace LibraryManagement
             }
             else if (option == 4)
             {
-                BorrowBook();
+                Borrow();
             }
             else if (option == 5)
             {
@@ -127,13 +127,13 @@ namespace LibraryManagement
         }
     }
 
-    public static void Pozicanie()
+    public static void Borrow()
     {
         Kniha book = new Kniha();
         Zapozicanie pozicanie = new Zapozicanie();
         Console.WriteLine("Name: ");
 
-        pozicanie.userName = Console.ReadLine();
+        pozicanie.bookName = Console.ReadLine();
 
         Console.WriteLine("Nazov knihy ktoru chcete pozicat: ");
         pozicanie.borrowBookName = Console.ReadLine();
@@ -146,8 +146,23 @@ namespace LibraryManagement
         {
             Console.WriteLine("Knihu s nazvom{1} sa nevedeli najst");
         }
+    }
 
+    public static void ReturnBook()
+    {
+        Kniha book = new Kniha();
+        Console.WriteLine("Nazov knihy ktoru chces vratit: ");
+        book.returnBook = Console.ReadLine();
+        
+        
 
+        if (book.List.Exists(y => y.bookName == returnBook))
+        {
+            foreach (Book addReturnBookCount in bookList)
+            {
+                
+            }
+        }
     }
 }
 
