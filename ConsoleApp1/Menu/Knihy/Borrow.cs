@@ -6,17 +6,14 @@ using System.Collections.Generic;
 
 namespace ConsoleApp1.Menu.Knihy
 {
-    public static void Borrow(Zapozicanie borrow)
+    public static void Borrow()
     {
         List<Kniha> bookList = new List<Kniha>();
         List<Zapozicanie> borrowList = new List<Zapozicanie>();
-
-        User.Book book = new User.Book();
+        Book book = new Book();
         BorrowDetails borrow = new BorrowDetails();
-
-        Console.WriteLine("User id : {0}", borrow.userId = borrowList.Count + 1);
         Console.Write("Name :");
-        borrow.userName = Console.ReadLine();
+
 
         Console.Write("Book id :");
         borrow.borrowBookId = int.Parse(Console.ReadLine());
@@ -25,22 +22,19 @@ namespace ConsoleApp1.Menu.Knihy
 
         if (bookList.Exists(x => x.bookId == borrow.borrowBookId))
         {
-            System.Collections.IList list = bookList;
-            for (int i = 0; i < list.Count; i++)
+            foreach (Book searchId in bookList)
             {
-                User.Book searchId = (User.Book)list[i];
-                if (searchId.bookCount >= searchId.book.Count - borrow.borrowCount && searchId.book.Count - borrow.borrowCount >= 0)
+                if (searchId.bookCount >= searchId.bookCount - borrow.borrowCount && searchId.bookCount - borrow.borrowCount >= 0)
                 {
                     if (searchId.bookId == borrow.borrowBookId)
                     {
-                        searchId.book.Count = searchId.bookCount - borrow.borrowCount;
+                        searchId.bookCount = searchId.bookCount - borrow.borrowCount;
                         break;
                     }
-                    continue;
                 }
                 else
                 {
-                    Console.WriteLine("Only {0} books are found", searchId.book.Count);
+                    Console.WriteLine("Only {0} books are found", searchId.bookCount);
                     break;
                 }
             }
@@ -52,3 +46,4 @@ namespace ConsoleApp1.Menu.Knihy
         borrowList.Add(borrow);
     }
 }
+   

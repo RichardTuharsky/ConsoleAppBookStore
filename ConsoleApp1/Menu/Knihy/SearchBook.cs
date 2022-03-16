@@ -1,4 +1,4 @@
-﻿using ConsoleApp1.Menu.Book;
+﻿using ConsoleApp1.Menu.User;
 using LibraryManagement;
 using System;
 using System.Collections.Generic;
@@ -6,16 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.Menu.User
+namespace ConsoleApp1
 {
 
-    public static void SearchBook()
+    public static SearchBook
     {
-
-        
         List<Kniha> bookList = new List<Kniha>();
         Book book = new Book();
-        Console.Write("Search by BOOK ID :");
+        Console.Writeline("Search by BOOK ID :");
         int find = int.Parse(Console.ReadLine());
 
         if (bookList.Exists(x => x.bookId == find))
@@ -31,10 +29,11 @@ namespace ConsoleApp1.Menu.User
                     "Book Count :{3}", searchId.bookId, searchId.bookName, searchId.bookCount);
                 }
             }
-        }
+        };
         else
         {
-            Console.WriteLine("Book id {0} not found", find);
+        int find = 0;
+         Console.WriteLine("Book id {0} not found", find);
         }
     }
 }

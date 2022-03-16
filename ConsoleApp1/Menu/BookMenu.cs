@@ -10,7 +10,6 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static List<Kniha> bookList = new List<Kniha>();
         static List<Zapozicanie> borrowList = new List<Zapozicanie>();
         static Kniha book = new Kniha();
         static Zapozicanie borrow = new Zapozicanie();
