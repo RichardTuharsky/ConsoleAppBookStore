@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.Menu.Uzivatel
-{
-    internal class ShowUsers
+namespace ConsoleApp1.Menu.User
+    class UserDetails
     {
+        public int userId;
+        public string userName;
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.Menu.Uzivatel
+namespace ConsoleApp1.Menu.User
 {
-    internal class CreateUser
+    internal class ShowUsers
     {
     }
 }

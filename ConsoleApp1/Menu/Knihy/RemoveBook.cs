@@ -1,15 +1,17 @@
 ﻿using LibraryManagement;
+using ConsoleApp1.Menu.Book;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApp1.Menu.User
 
 {
     public static void RemoveBook()
     {
+        List<Kniha> bookList = new List<Kniha>();
         Kniha book = new Kniha();
         Console.WriteLine("Zadaj nazov knihy ktoru chces vymazat: ");
         int Del = int.Parse(Console.ReadLine());
